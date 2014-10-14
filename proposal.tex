@@ -35,6 +35,8 @@ Most approaches to grasping assume that the target item is just as a human would
 
  In this approach, the human would place two markers on the item to 'suggest' where the robot should grab. This is still a perception challenge, because the robot needs to identify the markers and place them in the context of the item's surface. These markers would be used as a heavily weighted feature in an offline learning algorithm where the robot grasps many marked items, finds the surface around them, and evaluates the grip based on whether the item shifts when gripped and moved. This way, it will know when suggested markers are a bad idea or the grip should be slightly different than the suggestion. In addition to the markers in the rgbd image, the learning algorithm would use cubes of voxels around the marks as features.
  
+ \textbf{Possible Addition} Integrating human feedback could be an additional novel part of the project. It's often clear to us which grip is good and strong and which one is terrible. Commands like "too loose" could reset the estimation of the grasp and, going even further, commands like "shift up a little" could modify the seed for the estimator.
+ 
  \subsection{Actual tasks}
  \begin{enumerate}
  \item Write out the structure of the neural network for the learning algorithm
